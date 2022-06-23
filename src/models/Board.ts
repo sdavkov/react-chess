@@ -1,5 +1,6 @@
 import { Cell } from "./Cell";
 import { Colors } from "./Colors";
+import { Bishop } from "./figures/Bishop";
 import { King } from "./figures/King";
 import { Knight } from "./figures/Knight";
 import { Pawn } from "./figures/Pawn";
@@ -51,8 +52,8 @@ export class Board {
 	}
 
 	private addKings() {
-		new King(Colors.BLACK, this.getCell(3, 0))
-		new King(Colors.WHITE, this.getCell(3, 7))
+		new King(Colors.BLACK, this.getCell(4, 0))
+		new King(Colors.WHITE, this.getCell(4, 7))
 	}
 
 	private addKnights() {
@@ -63,10 +64,10 @@ export class Board {
 	}
 
 	private addBishops() {
-		new Pawn(Colors.BLACK, this.getCell(2, 0));
-		new Pawn(Colors.BLACK, this.getCell(5, 0));
-		new Pawn(Colors.WHITE, this.getCell(2, 7));
-		new Pawn(Colors.WHITE, this.getCell(5, 7));
+		new Bishop(Colors.BLACK, this.getCell(2, 0));
+		new Bishop(Colors.BLACK, this.getCell(5, 0));
+		new Bishop(Colors.WHITE, this.getCell(2, 7));
+		new Bishop(Colors.WHITE, this.getCell(5, 7));
 	}
 
 	private addRooks() {
@@ -77,8 +78,8 @@ export class Board {
 	}
 
 	private addQueens() {
-		new Queen(Colors.BLACK, this.getCell(4, 0));
-		new Queen(Colors.WHITE, this.getCell(4, 7));
+		new Queen(Colors.BLACK, this.getCell(3, 0));
+		new Queen(Colors.WHITE, this.getCell(3, 7));
 	}
 
 	public setFigures() {
