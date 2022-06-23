@@ -1,23 +1,12 @@
-import React, { useState } from 'react';
 import './App.css';
 import BoardComponent from './components/BoardComponent';
-import { Board } from './models/Board';
+
 
 function App() {
 
-  const [board, setBoard] = useState(new Board())
-
-  function restart() {
-    const board = new Board();
-    setBoard(board);
-  }
-
   return (
     <div className='app'>
-      <BoardComponent
-        board={board}
-        setBoard={setBoard}
-      />
+      <BoardComponent />
     </div>
   );
 }

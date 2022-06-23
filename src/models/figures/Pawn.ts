@@ -14,10 +14,8 @@ export class Pawn extends Figure {
 	}
 
 	canMove(target: Cell): boolean {
-		throw new Error("Method not implemented.");
+		if (!super.canMove(target))
+			return false;
+		return true;
 	}
-	moveFigure(target: Cell): void {
-		throw new Error("Method not implemented.");
-	}
-
 }

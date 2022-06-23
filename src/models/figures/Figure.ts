@@ -27,6 +27,13 @@ export abstract class Figure {
 		this.id = Math.random();
 	}
 
-	abstract canMove(target: Cell): boolean;
-	abstract moveFigure(target: Cell): void;
+	canMove(target: Cell) {
+		if (this.color === target.figure?.color)
+			return false;
+		if (target.figure?.name === FigureNames.KING)
+			return false;
+		return true;
+	};
+	
+	moveFigure(target: Cell) { }
 }

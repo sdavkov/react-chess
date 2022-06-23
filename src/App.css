@@ -32,10 +32,25 @@
 	position: relative;
 }
 
-.black {
+.cell.black {
 	background-color: deepskyblue;
 }
 
-.white {
+.cell.white {
 	background-color: #eed4ac;
+}
+
+.cell.selected {
+	background-color: brown;
+}
+
+.cell.available {
+	background-color: #22c022;
+}
+
+.cell .available {
+	height: 12px;
+	width: 12px;
+	border-radius: 50%;
+	background-color: #22c022;
 }

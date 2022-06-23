@@ -1,16 +1,13 @@
-import React, { FC } from 'react'
-import { Board } from '../models/Board'
+import React from 'react'
 import CellComponent from './CellComponent';
+import storeBoard from '../store/board';
+import { observer } from 'mobx-react-lite';
 
-interface BoardProps {
-	board: Board;
-	setBoard: (board: Board) => void;
-}
+const BoardComponent = () => {
 
-const BoardComponent: FC<BoardProps> = ({ board, setBoard }) => {
 	return (
 		<div className='board'>
-			{board.cells.map((row, index) => (
+			{storeBoard.board.cells.map((row, index) => (
 				<React.Fragment key={index}>
 					{row.map(cell => (
 						<CellComponent
@@ -24,4 +21,4 @@ const BoardComponent: FC<BoardProps> = ({ board, setBoard }) => {
 	)
 }
 
-export default BoardComponent
+export default observer(BoardComponent)
